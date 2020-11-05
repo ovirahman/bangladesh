@@ -6,7 +6,7 @@
 #' @export
 
 bd_plot <-
-  function(level = "country", type = "interactive"){
+  function(level = "country", type = "static"){
 
     switch (type,
       static = {tmap_mode("plot")},
@@ -16,16 +16,16 @@ bd_plot <-
 
     switch (level,
       country = {
-        tm_shape(map_country) + tm_polygons(col = "Country")
+        tm_shape(map_country) + tm_polygons(col = "Country", id = "Country")
       },
       division = {
-        tm_shape(map_division) + tm_polygons(col = "Division")
+        tm_shape(map_division) + tm_polygons(col = "Division", id = "Division")
       },
       district = {
-        tm_shape(map_district) + tm_polygons(col = "Division")
+        tm_shape(map_district) + tm_polygons(col = "Division", id = "District")
       },
       upazilla = {
-        tm_shape(map_upazilla) + tm_polygons(col = "Division")
+        tm_shape(map_upazilla) + tm_polygons(col = "Division", id = "Upazilla")
         },
       stop('incorrect level name. possible options: "country", "division", "district", "upazilla"')
     )

@@ -4,7 +4,7 @@
 \alias{bd_plot}
 \title{plot map}
 \usage{
-bd_plot(level = "country", type = "interactive")
+bd_plot(level = "country", type = "static")
 }
 \description{
 uses ggplot2
