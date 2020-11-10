@@ -11,7 +11,7 @@ bd_plot <-
     switch (type,
       static = {tmap_mode("plot")},
       interactive = {tmap_mode("view")},
-      stop('incorrect plotting mode. posible options: "static", "interactive"')
+      stop('incorrect plotting mode. should be one of: "static", "interactive"')
     )
 
     switch (level,
@@ -27,7 +27,7 @@ bd_plot <-
       upazilla = {
         tm_shape(map_upazilla) + tm_polygons(col = "Division", id = "Upazilla")
         },
-      stop('incorrect level name. possible options: "country", "division", "district", "upazilla"')
+      stop('incorrect level name. should be one of: "country", "division", "district", "upazilla"')
     )
   }
 
