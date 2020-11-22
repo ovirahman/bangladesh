@@ -24,10 +24,10 @@ bd_plot <-
       district = {
         tm_shape(map_district) + tm_polygons(col = "Division", id = "District")
       },
-      upazilla = {
-        tm_shape(map_upazilla) + tm_polygons(col = "Division", id = "Upazilla")
+      upazila = {
+        tm_shape(map_upazila) + tm_polygons(col = "Division", id = "Upazila")
         },
-      stop('incorrect level name. should be one of: "country", "division", "district", "upazilla"')
+      stop('incorrect level name. should be one of: "country", "division", "district", "upazila"')
     )
   }
 
