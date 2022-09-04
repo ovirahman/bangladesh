@@ -7,5 +7,5 @@
 bd_plot(level = "country", type = "static")
 }
 \description{
-uses ggplot2
+uses tmap
 }

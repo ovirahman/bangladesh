@@ -1,13 +1,13 @@
 #' plot map
 #'
-#' uses ggplot2
+#' uses tmap
 #'
 #' @import tmap
 #' @export
 
 bd_plot <-
   function(level = "country", type = "static"){
-
+    level = tolower(level)
     switch (type,
       static = {tmap_mode("plot")},
       interactive = {tmap_mode("view")},
@@ -27,7 +27,10 @@ bd_plot <-
       upazila = {
         tm_shape(map_upazila) + tm_polygons(col = "Division", id = "Upazila")
         },
-      stop('incorrect level name. should be one of: "country", "division", "district", "upazila"')
+      union = {
+        tm_shape(map_union) + tm_polygons(col = "Division", id = "Union")
+      },
+      stop('incorrect level name. should be one of: "country", "division", "district", "upazila","union')
     )
   }
 
