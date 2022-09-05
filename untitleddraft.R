@@ -53,3 +53,71 @@ tm_shape(mapdata) +tm_polygons(id = "Upazila",col = "population", style = "cont"
 
 
 usethis::use_data(pop_upazila_2011)
+
+
+
+########
+map_country <- bangladesh::map_country
+names(map_country)
+class(map_country)
+plot(map_country)
+library(tidyverse)
+
+map_country <- map_country %>% select(-c("ADM0_REF",  "ADM0ALT1EN", "ADM0ALT2EN", "date", "validOn", "validTo"))
+
+plot(map_country)
+
+class(map_country)
+usethis::use_data(map_country, overwrite = T)
+
+
+map_division <- bangladesh::map_division
+names(map_division)
+
+map_division <- map_division %>% select(-c("ADM1_REF", "ADM1ALT1EN", "ADM1ALT2EN", "date", "validOn", "validTo"))
+
+plot(map_division)
+
+usethis::use_data(map_division, overwrite = T)
+
+
+
+map_district <- bangladesh::map_district
+names(map_district)
+
+
+map_district <- map_district %>% select(-c("ADM2_REF",  "ADM2ALT1EN", "ADM2ALT2EN", "date" , "validOn", "ValidTo"))
+
+plot(map_district)
+
+
+usethis::use_data(map_district, overwrite = T)
+
+
+
+map_upazila <- bangladesh::map_upazila
+
+names(map_upazila)
+
+
+map_upazila <- map_upazila %>% select(-c("ADM3_REF", "ADM3ALT1EN", "ADM3ALT2EN", "date" , "validOn", "validTo" ))
+
+
+plot(map_upazila)
+
+usethis::use_data(map_upazila, overwrite = T)
+
+
+map_union <- bangladesh::map_union
+
+names(map_union)
+
+map_union <- map_union %>% select(-c("ADM4_REF","ADM4ALT1EN", "ADM4ALT2EN", "date" , "validOn", "validTo"))
+
+
+plot(map_union)
+
+
+usethis::use_data(map_union, overwrite = T)
+
+

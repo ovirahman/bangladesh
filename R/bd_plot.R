@@ -1,7 +1,8 @@
 #' plot map
 #'
 #' uses tmap
-#'
+#' @param level administrative level of bangladesh. Should be one of: "country", "division", "district", "upazila","union'
+#' @param type  Plotting mode: "static" or "interactive"
 #' @import tmap
 #' @export
 
@@ -16,21 +17,21 @@ bd_plot <-
 
     switch (level,
       country = {
-        tm_shape(map_country) + tm_polygons(col = "Country", id = "Country")
+        tm_shape(bangladesh::map_country) + tm_polygons(col = "Country", id = "Country")
       },
       division = {
-        tm_shape(map_division) + tm_polygons(col = "Division", id = "Division")
+        tm_shape(bangladesh::map_division) + tm_polygons(col = "Division", id = "Division")
       },
       district = {
-        tm_shape(map_district) + tm_polygons(col = "Division", id = "District")
+        tm_shape(bangladesh::map_district) + tm_polygons(col = "Division", id = "District")
       },
       upazila = {
-        tm_shape(map_upazila) + tm_polygons(col = "Division", id = "Upazila")
+        tm_shape(bangladesh::map_upazila) + tm_polygons(col = "Division", id = "Upazila")
         },
       union = {
-        tm_shape(map_union) + tm_polygons(col = "Division", id = "Union")
+        tm_shape(bangladesh::map_union) + tm_polygons(col = "Division", id = "Union")
       },
-      stop('incorrect level name. should be one of: "country", "division", "district", "upazila","union')
+      stop('Incorrect level name. Should be one of: "country", "division", "district", "upazila","union')
     )
   }
 
