@@ -22,8 +22,13 @@ RoxygenNote: 7.1.1
 Depends: 
     R (>= 2.10)
 Imports: 
-    tmap, sf
+    tmap,
+    sf
 Suggests: 
+    dplyr,
+    ggplot2,
     knitr,
-    rmarkdown
+    rmarkdown,
+    scales,
+    viridis
 VignetteBuilder: knitr
