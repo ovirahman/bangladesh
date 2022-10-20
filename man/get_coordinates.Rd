@@ -2,9 +2,12 @@
 % Please edit documentation in R/get_coordinates.R
 \name{get_coordinates}
 \alias{get_coordinates}
-\title{get center coordinates}
+\title{get centroids of administrative areas}
 \usage{
 get_coordinates(level = "division")
+}
+\arguments{
+\item{level}{administrative level of bangladesh. Should be one of: "country", "division", "district", "upazila","union'}
 }
 \description{
 uses sf

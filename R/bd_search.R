@@ -1,26 +1,29 @@
 #' get center coordinates
 #'
 #' uses sf
-#'
+#' @param searchFor search keyword
+#' @param level administrative level of bangladesh. Should be one of: "country", "division", "district", "upazila","union'
+#' @param as.is  boolean, if TRUE, matches exact keyword as given
+#' @param  coordinates  boolean, if TRUE, returns cecntroids of searched areas (latitudes and longitudes)
 #' @import sf
 #' @export
 
 bd_search <-
     function(searchFor, level = "division", as.is = F, coordinates = F){
-        
+
         level = tolower(level)
         if(as.is){
             searchFor <- paste0("^", searchFor, "$")
         }
         switch (level,
-                
+
                 division = {
-                    
+
                     i <- with(bangladesh::area_names, grepl(searchFor, paste(Division), ignore.case = T))
                     r <- bangladesh::area_names[i,]
                     if(nrow(r) == 0){warning("No Result Found")}
                     if(!coordinates){
-                        return(r) 
+                        return(r)
                     }
                     else {
                         m <- merge(bangladesh::map_union,r)
@@ -34,7 +37,7 @@ bd_search <-
                     r <- bangladesh::area_names[i,]
                     if(nrow(r) == 0){warning("No Result Found")}
                     if(!coordinates){
-                        return(r) 
+                        return(r)
                     }
                     else {
                         m <- merge(bangladesh::map_union,r)
@@ -48,7 +51,7 @@ bd_search <-
                     r <- bangladesh::area_names[i,]
                     if(nrow(r) == 0){warning("No Result Found")}
                     if(!coordinates){
-                        return(r) 
+                        return(r)
                     }
                     else {
                         m <- merge(bangladesh::map_union,r)
@@ -61,9 +64,9 @@ bd_search <-
                     i <- with(bangladesh::area_names, grepl(searchFor, paste(Union), ignore.case = T))
                     r <- bangladesh::area_names[i,]
                     if(nrow(r) == 0){warning("No Result Found")}
-                    
+
                     if(!coordinates){
-                        return(r) 
+                        return(r)
                     }
                     else {
                         m <- merge(bangladesh::map_union,r)
@@ -78,7 +81,7 @@ bd_search <-
                     r <- bangladesh::area_names[i,]
                     if(nrow(r) == 0){warning("No Result Found")}
                     if(!coordinates){
-                        return(r) 
+                        return(r)
                     }
                     else {
                         m <- merge(bangladesh::map_union,r)

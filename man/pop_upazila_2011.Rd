@@ -11,9 +11,9 @@ A data frame with 64 rows and 29 variables:
 \item{upazila}{upazila (admin level 3) names}
 \item{admin3Pcode}{upazila codes}
 \item{district}{district (admin level 2) names}
-\item{admin2Pcode}{district codes}
+\item{ADM2_PCODE}{district codes}
 \item{division}{division (admin level 1) names}
-\item{admin1Pcode}{division codes}
+\item{ADM1_PCODE}{division codes}
 \item{population}{population in 2011}
 \item{P00_04}{population in age group 0-4}
 \item{P05_09}{population in age group 5-9}

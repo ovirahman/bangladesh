@@ -1,0 +1,119 @@
+---
+title: "bangladesh: introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+The purpose of this package is to provide ready to use shapefiles
+for different administrative regions of Bangladesh (e.g. Division, District, Upazila, Union).
+Usually it is difficult to plot choropleth maps for Bangladesh in R. This package will help
+users to draw thematic maps of administrative regions of Bangladesh easily as it comes with the 
+sf objects for the boundaries and regions' names in English. It also provides some functions
+that allows users to easily get specific area maps and to get center coordinates for regions.
+Users can also search for a specific area and calculate the centroids of those areas.
+
+
+### Getting Started
+
+This packages comes with sf objects for administrative levels 0-4 (Country, 
+Division, District, Upazilla, Union). Easiest way to get the shapefile for
+a level is to is to use `get_map()` function.
+
+```{r setup}
+# remotes::install_github("ovirahman/bangladesh")
+library(bangladesh)
+
+country <- get_map("country")
+division <- get_map("division")
+district <- get_map("district")
+upazila <- get_map("upazila")
+union <- get_map("union")
+```
+
+### Plotting Map
+
+To start with we can check the sample function `bd_plot()` to draw the map of different 
+administrative levels of Bangladesh, that uses [`tmap`](https://cran.r-project.org/web/packages/tmap/), which
+is a very flexible and cool package to visulize thematic maps.
+
+```{r plot , warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
+bd_plot("country")
+bd_plot("division")
+bd_plot("district")
+```
+
+We can also plot beautiful interactive maps with this.
+
+```{r interactive, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
+bd_plot(level = "district", type = "interactive")
+```
+
+
+### Choropleth map with data 
+
+My most favourite package for creating thematic maps is `tmap`. Using this package we can 
+make cool choropleths, both static and interactive. When plotting mode is chosen as static (plot) it 
+returns an `ggplot` object, when interactive (view) it returns an [`leaflet`](https://cran.r-project.org/web/packages/leaflet) object. 
+
+```{r choropleth_static, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
+library(tmap)
+population <- bangladesh::pop_district_2011[, c("district", "population")]
+district <- get_map("district")
+
+map_data <- dplyr::left_join(district, population, by = c("District" = "district"))
+
+map <- tm_shape(map_data) + 
+  tm_polygons("population",id = "District",palette = "Reds", title = "Population") +
+  tm_style("cobalt")+
+  tm_layout(
+    "Bangladesh District Wise Population Map\nSource: BBS",
+    title.position = c("left", "bottom"),
+    legend.position = c("right", "top")
+    )
+
+tmap::tmap_mode("plot")
+map
+```
+
+
+```{r choropleth_interactive, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
+tmap::tmap_mode("view")
+map
+```
+
+
+### Using ggplot2 and leaflet
+
+We can also use `ggplot2` and `leaflet` to draw customized choropleths with the sf objects provided in
+`bangladesh` package.
+
+
+```{r ggplot, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
+library(ggplot2)
+ggplot(data = map_data) +
+  geom_sf(aes(fill = population))+
+  theme_void()+
+  viridis::scale_fill_viridis(trans = "log", name="Population", labels = scales::unit_format(unit = "M", scale = 1e-6)) +
+  labs(
+    title = "Bangladesh Population Map",
+    subtitle = "Population & Housing Census 2011",
+    caption = "Data Source: BBS"
+  )
+  
+```
+
+
+
+
+
+
+

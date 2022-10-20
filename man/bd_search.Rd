@@ -6,6 +6,15 @@
 \usage{
 bd_search(searchFor, level = "division", as.is = F, coordinates = F)
 }
+\arguments{
+\item{searchFor}{search keyword}
+
+\item{level}{administrative level of bangladesh. Should be one of: "country", "division", "district", "upazila","union'}
+
+\item{as.is}{boolean, if TRUE, matches exact keyword as given}
+
+\item{coordinates}{boolean, if TRUE, returns cecntroids of searched areas (latitudes and longitudes)}
+}
 \description{
 uses sf
 }

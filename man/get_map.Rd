@@ -9,6 +9,9 @@ get_map(level = "country")
 \arguments{
 \item{level}{administrative level of bangladesh. Should be one of: "country", "division", "district", "upazila","union'}
 }
+\value{
+shapefile for given administrative level
+}
 \description{
-uses tmap
+get boudaries shapefile
 }

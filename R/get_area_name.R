@@ -1,4 +1,4 @@
-#' get area names available in the shapefiles
+#' get area names in English, available in the shapefiles
 #'
 #'
 #'

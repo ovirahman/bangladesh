@@ -2,10 +2,10 @@
 % Please edit documentation in R/get_area_name.R
 \name{get_area_names}
 \alias{get_area_names}
-\title{get area names available in the shapefiles}
+\title{get area names in English, available in the shapefiles}
 \usage{
 get_area_names()
 }
 \description{
-get area names available in the shapefiles
+get area names in English, available in the shapefiles
 }

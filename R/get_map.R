@@ -1,7 +1,7 @@
 #' get boudaries shapefile
 #'
-#' uses tmap
 #' @param level administrative level of bangladesh. Should be one of: "country", "division", "district", "upazila","union'
+#' @return shapefile for given administrative level
 #' @export
 
 get_map <-

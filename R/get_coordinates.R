@@ -1,7 +1,7 @@
-#' get center coordinates
+#' get centroids of administrative areas
 #'
 #' uses sf
-#'
+#' @param  level administrative level of bangladesh. Should be one of: "country", "division", "district", "upazila","union'
 #' @import sf
 #' @export
 
