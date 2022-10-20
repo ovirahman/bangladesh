@@ -44,7 +44,7 @@ get_coordinates <-
               return(data.frame(n, lat = c[[2]], lon = c[[1]]))
 
             },
-            stop('incorrect level name. should be one of: "division", "district", "upazila","union')
+            stop('incorrect level name. Should be one of: "division", "district", "upazila","union')
     )
   }
 

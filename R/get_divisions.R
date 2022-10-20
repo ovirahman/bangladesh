@@ -5,7 +5,7 @@
 #' @export
 
 get_divisions <-
-  function(divisions, level = "country"){
+  function(divisions, level = "division"){
     n <- c("Barisal", "Chittagong", "Dhaka", "Khulna", "Mymensingh", "Rajshahi", "Rangpur", "Sylhet")
     if(!all(divisions %in% n)){
       stop('Incorrect division name. Should match: "Barisal", "Chittagong", "Dhaka", "Khulna", "Mymensingh", "Rajshahi", "Rangpur", "Sylhet"')
@@ -26,7 +26,7 @@ get_divisions <-
             union = {
               return(bangladesh::map_union[bangladesh::map_union$Division %in% divisions,])
             },
-            stop('Incorrect level name. Should be one of: "country", "division", "district", "upazila","union')
+            stop('Incorrect level name. Should be one of: "division", "district", "upazila","union')
     )
   }
 

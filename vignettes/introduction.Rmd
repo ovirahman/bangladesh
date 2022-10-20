@@ -23,7 +23,7 @@ that allows users to easily get specific area maps and to get center coordinates
 Users can also search for a specific area and calculate the centroids of those areas.
 
 
-### Getting Started
+## Getting Started
 
 This packages comes with sf objects for administrative levels 0-4 (Country, 
 Division, District, Upazilla, Union). Easiest way to get the shapefile for
@@ -40,7 +40,7 @@ upazila <- get_map("upazila")
 union <- get_map("union")
 ```
 
-### Plotting Map
+## Plotting Map
 
 To start with we can check the sample function `bd_plot()` to draw the map of different 
 administrative levels of Bangladesh, that uses [`tmap`](https://cran.r-project.org/web/packages/tmap/), which
@@ -59,7 +59,7 @@ bd_plot(level = "district", type = "interactive")
 ```
 
 
-### Choropleth map with data 
+## Choropleth map with data 
 
 My most favourite package for creating thematic maps is `tmap`. Using this package we can 
 make cool choropleths, both static and interactive. When plotting mode is chosen as static (plot) it 
@@ -92,7 +92,7 @@ map
 ```
 
 
-### Using ggplot2 and leaflet
+## Using ggplot2 and leaflet
 
 We can also use `ggplot2` and `leaflet` to draw customized choropleths with the sf objects provided in
 `bangladesh` package.
@@ -112,7 +112,63 @@ ggplot(data = map_data) +
   
 ```
 
+## Other usefull functions
 
+It is also possible to get the approximate center points (centroids) of administrative regions easily 
+
+by using `get_coordinates()` function provided in `bangladesh` package.
+
+
+```{r centroids, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
+division_map <- get_map("division")
+division_centroids <- bangladesh::get_coordinates(level = "division")
+knitr::kable(division_centroids, format = "html")
+ggplot(data = division_map) +
+  geom_sf() +
+  geom_sf_label(aes(label = Division)) +
+  geom_point(data = division_centroids, x = division_centroids$lon, y = division_centroids$lat, col = "red", size = 3) +
+  xlab("")+ ylab("")+
+  theme_minimal()
+
+
+```
+
+
+Suppose someone needs to plot partially  a single or selected number of divisions 
+instead of whole country map, in that case the function `get_divisions()` might be benefitial. 
+
+```{r partial_map, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
+
+sylhet <- get_divisions(divisions = "Sylhet",level =  "upazila")
+# single division
+ggplot(data = sylhet) +
+  geom_sf() +
+  xlab("")+ ylab("")+
+  theme_minimal()
+
+#multiple division
+sylhet_chittagong_dhaka <- get_divisions(divisions = c("Sylhet", "Chittagong", "Dhaka"),level =  "upazila")
+ggplot(data = sylhet_chittagong_dhaka) +
+  geom_sf() +
+  xlab("")+ ylab("")+
+  theme_minimal()
+
+
+```
+
+To search for a area within the provided names for administrative regions we can
+apply the `bd_search()` function. The result can also include cecntroids for those areas.
+
+
+```{r search, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
+amtali <- bd_search("amtali", level = "union", as.is = T, coordinates = T)
+knitr::kable(amtali, format = "html")
+ggplot(bangladesh::map_union) +
+  geom_sf() +
+  geom_point(data = amtali, x = amtali$lon, y = amtali$lat, col = "red", size = 3) 
+
+
+```
 
 
 

@@ -17,10 +17,12 @@ bd_plot <-
 
     switch (level,
       country = {
-        tm_shape(bangladesh::map_country) + tm_polygons(col = "Country", id = "Country")
+        tm_shape(bangladesh::map_country) + tm_polygons(col = "Country", id = "Country", legend.show = FALSE)
       },
       division = {
-        tm_shape(bangladesh::map_division) + tm_polygons(col = "Division", id = "Division")
+        tm_shape(bangladesh::map_division) + tm_polygons(col = "Division",
+                                                         id = "Division", legend.show = FALSE)+
+          tm_text("Division")
       },
       district = {
         tm_shape(bangladesh::map_district) + tm_polygons(col = "Division", id = "District")
