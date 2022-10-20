@@ -1,4 +1,4 @@
-#' get center coordinates
+#' search for specific areas
 #'
 #' uses sf
 #' @param searchFor search keyword

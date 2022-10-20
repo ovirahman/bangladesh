@@ -1,4 +1,4 @@
-#' sample function for plotting map of different regions
+#' sample function for plotting map of different administrative levels
 #'
 #' uses tmap
 #' @param level administrative level of bangladesh. Should be one of: "country", "division", "district", "upazila","union'
