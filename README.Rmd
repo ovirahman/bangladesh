@@ -45,7 +45,7 @@ To start with we can check the sample function `bd_plot()` to draw the map of di
 administrative levels of Bangladesh, that uses [`tmap`](https://cran.r-project.org/web/packages/tmap/), which
 is a very flexible and cool package to visulize thematic maps.
 
-```{r plot , warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
+```{r plot, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
 bd_plot("country")
 bd_plot("division")
 bd_plot("district")
@@ -155,8 +155,8 @@ ggplot(data = sylhet_chittagong_dhaka) +
 
 ```
 
-To search for a area within the provided names for administrative regions we can
-apply the `bd_search()` function. The result can also include cecntroids for those areas.
+To search for an area within the provided names for administrative regions we can
+apply the `bd_search()` function. The result can also include centroids for those areas.
 
 
 ```{r search, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}

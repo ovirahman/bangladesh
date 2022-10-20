@@ -156,8 +156,8 @@ ggplot(data = sylhet_chittagong_dhaka) +
 
 ```
 
-To search for a area within the provided names for administrative regions we can
-apply the `bd_search()` function. The result can also include cecntroids for those areas.
+To search for an area within the provided names for administrative regions we can
+apply the `bd_search()` function. The result can also include centroids for those areas.
 
 
 ```{r search, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}

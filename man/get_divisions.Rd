@@ -4,7 +4,7 @@
 \alias{get_divisions}
 \title{get partial maps for divisions}
 \usage{
-get_divisions(divisions, level = "country")
+get_divisions(divisions, level = "division")
 }
 \arguments{
 \item{divisions}{character vector for division names. Can take multiple divisions.}

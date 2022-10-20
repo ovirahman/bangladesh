@@ -39,19 +39,19 @@ flexible and cool package to visulize thematic maps.
 bd_plot("country")
 ```
 
-<img src="man/figures/README-plot -1.png" style="display: block; margin: auto;" />
+<img src="man/figures/README-plot-1.png" style="display: block; margin: auto;" />
 
 ``` r
 bd_plot("division")
 ```
 
-<img src="man/figures/README-plot -2.png" style="display: block; margin: auto;" />
+<img src="man/figures/README-plot-2.png" style="display: block; margin: auto;" />
 
 ``` r
 bd_plot("district")
 ```
 
-<img src="man/figures/README-plot -3.png" style="display: block; margin: auto;" />
+<img src="man/figures/README-plot-3.png" style="display: block; margin: auto;" />
 
 We can also plot beautiful interactive maps with this.
 
@@ -261,9 +261,9 @@ ggplot(data = sylhet_chittagong_dhaka) +
 
 <img src="man/figures/README-partial_map-2.png" style="display: block; margin: auto;" />
 
-To search for a area within the provided names for administrative
+To search for an area within the provided names for administrative
 regions we can apply the `bd_search()` function. The result can also
-include cecntroids for those areas.
+include centroids for those areas.
 
 ``` r
 amtali <- bd_search("amtali", level = "union", as.is = T, coordinates = T)
