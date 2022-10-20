@@ -2,7 +2,7 @@
 % Please edit documentation in R/bd_plot.R
 \name{bd_plot}
 \alias{bd_plot}
-\title{sample function for plotting map of different regions}
+\title{sample function for plotting map of different administrative levels}
 \usage{
 bd_plot(level = "country", type = "static")
 }

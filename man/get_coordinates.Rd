@@ -7,7 +7,7 @@
 get_coordinates(level = "division")
 }
 \arguments{
-\item{level}{administrative level of bangladesh. Should be one of: "country", "division", "district", "upazila","union'}
+\item{level}{administrative level of bangladesh. Should be one of: "division", "district", "upazila","union'}
 }
 \description{
 uses sf

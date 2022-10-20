@@ -2,7 +2,7 @@
 % Please edit documentation in R/bd_search.R
 \name{bd_search}
 \alias{bd_search}
-\title{get center coordinates}
+\title{search for specific areas}
 \usage{
 bd_search(searchFor, level = "division", as.is = F, coordinates = F)
 }
