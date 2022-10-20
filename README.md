@@ -39,19 +39,19 @@ flexible and cool package to visulize thematic maps.
 bd_plot("country")
 ```
 
-<img src="man/figures/README-plot -1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-plot -1.png" style="display: block; margin: auto;" />
 
 ``` r
 bd_plot("division")
 ```
 
-<img src="man/figures/README-plot -2.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-plot -2.png" style="display: block; margin: auto;" />
 
 ``` r
 bd_plot("district")
 ```
 
-<img src="man/figures/README-plot -3.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-plot -3.png" style="display: block; margin: auto;" />
 
 We can also plot beautiful interactive maps with this.
 
@@ -83,7 +83,7 @@ tmap::tmap_mode("plot")
 map
 ```
 
-<img src="man/figures/README-choropleth_static-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-choropleth_static-1.png" style="display: block; margin: auto;" />
 
 ## Using ggplot2 and leaflet
 
@@ -103,7 +103,7 @@ ggplot(data = map_data) +
   )
 ```
 
-<img src="man/figures/README-ggplot-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-ggplot-1.png" style="display: block; margin: auto;" />
 
 ## Other usefull functions
 
@@ -233,7 +233,7 @@ ggplot(data = division_map) +
   theme_minimal()
 ```
 
-<img src="man/figures/README-centroids-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-centroids-1.png" style="display: block; margin: auto;" />
 
 Suppose someone needs to plot partially a single or selected number of
 divisions instead of whole country map, in that case the function
@@ -248,7 +248,7 @@ ggplot(data = sylhet) +
   theme_minimal()
 ```
 
-<img src="man/figures/README-partial_map-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-partial_map-1.png" style="display: block; margin: auto;" />
 
 ``` r
 #multiple division
@@ -259,7 +259,7 @@ ggplot(data = sylhet_chittagong_dhaka) +
   theme_minimal()
 ```
 
-<img src="man/figures/README-partial_map-2.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-partial_map-2.png" style="display: block; margin: auto;" />
 
 To search for a area within the provided names for administrative
 regions we can apply the `bd_search()` function. The result can also
@@ -383,4 +383,4 @@ ggplot(bangladesh::map_union) +
   geom_point(data = amtali, x = amtali$lon, y = amtali$lat, col = "red", size = 3) 
 ```
 
-<img src="man/figures/README-search-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-search-1.png" style="display: block; margin: auto;" />
