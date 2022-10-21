@@ -4,7 +4,7 @@
 #' @param searchFor search keyword
 #' @param level administrative level of bangladesh. Should be one of: "country", "division", "district", "upazila","union'
 #' @param as.is  boolean, if TRUE, matches exact keyword as given
-#' @param  coordinates  boolean, if TRUE, returns cecntroids of searched areas (latitudes and longitudes)
+#' @param  coordinates  boolean, if TRUE, returns centroids of searched areas (latitudes and longitudes)
 #' @import sf
 #' @export
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_map.R
 \name{get_map}
 \alias{get_map}
-\title{get boudaries shapefile}
+\title{get shapefile for different administrative levels}
 \usage{
 get_map(level = "country")
 }
@@ -13,5 +13,5 @@ get_map(level = "country")
 shapefile for given administrative level
 }
 \description{
-get boudaries shapefile
+get shapefile for different administrative levels
 }

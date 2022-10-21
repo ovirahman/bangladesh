@@ -13,7 +13,7 @@ bd_search(searchFor, level = "division", as.is = F, coordinates = F)
 
 \item{as.is}{boolean, if TRUE, matches exact keyword as given}
 
-\item{coordinates}{boolean, if TRUE, returns cecntroids of searched areas (latitudes and longitudes)}
+\item{coordinates}{boolean, if TRUE, returns centroids of searched areas (latitudes and longitudes)}
 }
 \description{
 uses sf

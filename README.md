@@ -14,7 +14,7 @@ area and calculate the centroids of those areas.
 ## Getting Started
 
 This packages comes with sf objects for administrative levels 0-4
-(Country, Division, District, Upazilla, Union). The easiest way to get
+(Country, Division, District, Upazila, Union). The easiest way to get
 the shapefile for a level is to is to use `get_map()` function.
 
 ``` r
@@ -105,7 +105,7 @@ ggplot(data = map_data) +
 
 <img src="man/figures/README-ggplot-1.png" style="display: block; margin: auto;" />
 
-## Other usefull functions
+## Other useful functions
 
 It is also possible to get the approximate center points (centroids) of
 administrative regions easily
