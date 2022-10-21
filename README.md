@@ -1,21 +1,21 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-The purpose of this package is to provide ready to use shapefiles for
-different administrative regions of Bangladesh (e.g. Division, District,
-Upazila, Union). Usually it is difficult to plot choropleth maps for
+This package aims to provide ready-to-use shapefiles for different
+administrative regions of Bangladesh (e.g., Division, District, Upazila,
+and Union). Usually, it is difficult to plot choropleth maps for
 Bangladesh in R. This package will help users to draw thematic maps of
 administrative regions of Bangladesh easily as it comes with the sf
 objects for the boundaries and regions’ names in English. It also
-provides some functions that allows users to easily get specific area
-maps and to get center coordinates for regions. Users can also search
-for a specific area and calculate the centroids of those areas.
+provides functions allowing users to efficiently get specific area maps
+and center coordinates for regions. Users can also search for a specific
+area and calculate the centroids of those areas.
 
 ## Getting Started
 
 This packages comes with sf objects for administrative levels 0-4
-(Country, Division, District, Upazilla, Union). Easiest way to get the
-shapefile for a level is to is to use `get_map()` function.
+(Country, Division, District, Upazilla, Union). The easiest way to get
+the shapefile for a level is to is to use `get_map()` function.
 
 ``` r
 # remotes::install_github("ovirahman/bangladesh")
@@ -31,9 +31,9 @@ union <- get_map("union")
 ## Plotting Map
 
 To start with we can check the sample function `bd_plot()` to draw the
-map of different administrative levels of Bangladesh, that uses
-[`tmap`](https://cran.r-project.org/web/packages/tmap/), which is a very
-flexible and cool package to visulize thematic maps.
+map of different administrative levels of Bangladesh, which uses
+[`tmap`](https://cran.r-project.org/web/packages/tmap/), a very flexible
+and cool package to visualize thematic maps.
 
 ``` r
 bd_plot("country")
@@ -57,10 +57,10 @@ We can also plot beautiful interactive maps with this.
 
 ## Choropleth map with data
 
-My most favourite package for creating thematic maps is `tmap`. Using
-this package we can make cool choropleths, both static and interactive.
-When plotting mode is chosen as static (plot) it returns an `ggplot`
-object, when interactive (view) it returns an
+Using the `tmap` package (my favorite for creating thematic maps), we
+can make cool choropleths, both static and interactive. When plotting
+mode is chosen as static (plot) it returns a `ggplot` object, when
+interactive (view) it returns a
 [`leaflet`](https://cran.r-project.org/web/packages/leaflet) object.
 
 ``` r
@@ -110,7 +110,7 @@ ggplot(data = map_data) +
 It is also possible to get the approximate center points (centroids) of
 administrative regions easily
 
-by using `get_coordinates()` function provided in `bangladesh` package.
+by using `get_coordinates()` function in `bangladesh` package.
 
 ``` r
 division_map <- get_map("division")
@@ -237,7 +237,7 @@ ggplot(data = division_map) +
 
 Suppose someone needs to plot partially a single or selected number of
 divisions instead of whole country map, in that case the function
-`get_divisions()` might be benefitial.
+`get_divisions()` might be beneficial.
 
 ``` r
 sylhet <- get_divisions(divisions = "Sylhet",level =  "upazila")
