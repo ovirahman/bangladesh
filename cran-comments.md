@@ -1,10 +1,10 @@
-## R CMD check results
-There were no ERRORs or WARNINGs. 
+## Resubmission
+This is a resubmission. In this version I have addressed all the comments:
 
-There was 1 NOTE:
+* Converted CRAN URLs to canonical form
 
-*  checking installed package size ... 
-     installed size is 10.5Mb
-     sub-directories of 1Mb or more:
-       data   7.8Mb
-       doc    2.6Mb
+* Converted the DESCRIPTION title to title case.
+
+* The Description field no longer starts with  'This package' or similar.
+
+* Size of tarball: reduced to under 5MB

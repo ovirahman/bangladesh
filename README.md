@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-This package aims to provide ready-to-use shapefiles for different
+The bangladesh package provides ready-to-use shapefiles for different
 administrative regions of Bangladesh (e.g., Division, District, Upazila,
 and Union). Usually, it is difficult to plot choropleth maps for
 Bangladesh in R. This package will help users to draw thematic maps of
@@ -32,8 +32,8 @@ union <- get_map("union")
 
 To start with we can check the sample function `bd_plot()` to draw the
 map of different administrative levels of Bangladesh, which uses
-[`tmap`](https://cran.r-project.org/web/packages/tmap/), a very flexible
-and cool package to visualize thematic maps.
+[`tmap`](https://cran.r-project.org/package=tmap), a very flexible and
+cool package to visualize thematic maps.
 
 ``` r
 bd_plot("country")
@@ -61,7 +61,7 @@ Using the `tmap` package (my favorite for creating thematic maps), we
 can make cool choropleths, both static and interactive. When plotting
 mode is chosen as static (plot) it returns a `ggplot` object, when
 interactive (view) it returns a
-[`leaflet`](https://cran.r-project.org/web/packages/leaflet) object.
+[`leaflet`](https://cran.r-project.org/package=leaflet) object.
 
 ``` r
 library(tmap)
@@ -84,6 +84,7 @@ map
 ```
 
 <img src="man/figures/README-choropleth_static-1.png" style="display: block; margin: auto;" />
+To make it interactive we can do the following:
 
 ## Using ggplot2 and leaflet
 
