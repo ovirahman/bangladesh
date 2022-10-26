@@ -1,13 +1,13 @@
 Package: bangladesh
 Title: Provides Ready to Use Shapefiles for Geographical Map of Bangladesh
-Description: The bangladesh package provides ready-to-use shapefiles for different administrative 
-    regions of Bangladesh (e.g., Division, District, Upazila, and Union). 
-    Usually, it is difficult to plot choropleth maps for Bangladesh in R. 
-    This package will help users to draw thematic maps of administrative regions 
-    of Bangladesh easily as it comes with the sf objects for the boundaries and 
-    regions’ names in English. It also provides functions allowing users to efficiently
-    get specific area maps and center coordinates for regions. Users can also search for
-    a specific area and calculate the centroids of those areas. 
+Description: Usually, it is difficult to plot choropleth maps for Bangladesh in 'R'.
+    The 'bangladesh' package provides ready-to-use shapefiles for different administrative
+    regions of Bangladesh (e.g., Division, District, Upazila, and Union).
+    This package helps users to draw thematic maps of administrative regions
+    of Bangladesh easily as it comes with the 'sf' objects for the boundaries.
+    It also provides functions allowing users to efficiently get specific area
+    maps and center coordinates for regions. Users can also search for
+    a specific area and calculate the centroids of those areas.
 Version: 1.0.0
 Authors@R: 
     person(given = "Musaddiqur Rahman",

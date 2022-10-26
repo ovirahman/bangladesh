@@ -17,3 +17,6 @@ shapefile for given administrative level
 \description{
 get partial maps for divisions
 }
+\examples{
+get_divisions(divisions = "Sylhet",level =  "upazila")
+}

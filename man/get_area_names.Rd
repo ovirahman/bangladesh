@@ -6,6 +6,13 @@
 \usage{
 get_area_names()
 }
+\value{
+A data frame with area names in English
+}
 \description{
 get area names in English, available in the shapefiles
+}
+\examples{
+names <- get_area_names()
+
 }

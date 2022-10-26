@@ -5,11 +5,14 @@
 #' @param level administrative level of bangladesh. Should be one of: "country", "division", "district", "upazila","union'
 #' @param as.is  boolean, if TRUE, matches exact keyword as given
 #' @param  coordinates  boolean, if TRUE, returns centroids of searched areas (latitudes and longitudes)
+#' @return  A data frame
+#' @examples
+#' bd_search("amtali", level = "union", as.is = TRUE, coordinates = TRUE)
 #' @import sf
 #' @export
 
 bd_search <-
-    function(searchFor, level = "division", as.is = F, coordinates = F){
+    function(searchFor, level = "division", as.is = FALSE, coordinates = FALSE){
 
         level = tolower(level)
         if(as.is){

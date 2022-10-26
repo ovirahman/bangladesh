@@ -2,6 +2,8 @@
 #' @param divisions character vector for division names. Can take multiple divisions.
 #' @param level administrative level of bangladesh. Should be one of: "division", "district", "upazila","union'
 #' @return shapefile for given administrative level
+#' @examples
+#' get_divisions(divisions = "Sylhet",level =  "upazila")
 #' @export
 
 get_divisions <-

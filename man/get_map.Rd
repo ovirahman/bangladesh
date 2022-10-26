@@ -15,3 +15,8 @@ shapefile for given administrative level
 \description{
 get shapefile for different administrative levels
 }
+\examples{
+country <- get_map("country")
+division <- get_map("division")
+district <- get_map("district")
+}

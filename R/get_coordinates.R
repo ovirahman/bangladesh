@@ -2,6 +2,11 @@
 #'
 #' uses sf
 #' @param  level administrative level of bangladesh. Should be one of: "division", "district", "upazila","union'
+#' @returns A data frame containing latitudes and longitudes
+#' @examples
+#' get_coordinates(level = "division")
+#' get_coordinates(level = "district")
+#'
 #' @import sf
 #' @export
 

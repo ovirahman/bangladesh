@@ -7,10 +7,19 @@
 bd_plot(level = "country", type = "static")
 }
 \arguments{
-\item{level}{administrative level of bangladesh. Should be one of: "country", "division", "district", "upazila","union'}
+\item{level}{Administrative level of bangladesh. Should be one of: "country", "division", "district", "upazila","union'}
 
 \item{type}{Plotting mode: "static" or "interactive"}
 }
+\value{
+Static or interactive plot for administrative levels
+}
 \description{
 uses tmap
+}
+\examples{
+# Plot static map of district
+bd_plot(level = "district", type = "static")
+
+
 }

@@ -9,6 +9,14 @@ get_coordinates(level = "division")
 \arguments{
 \item{level}{administrative level of bangladesh. Should be one of: "division", "district", "upazila","union'}
 }
+\value{
+A data frame containing latitudes and longitudes
+}
 \description{
 uses sf
+}
+\examples{
+get_coordinates(level = "division")
+get_coordinates(level = "district")
+
 }

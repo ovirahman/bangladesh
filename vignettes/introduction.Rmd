@@ -54,7 +54,7 @@ bd_plot("district")
 
 We can also plot beautiful interactive maps with this.
 
-```{r interactive, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
+```{r interactive,include = FALSE, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
 bd_plot(level = "district", type = "interactive")
 ```
 
@@ -87,7 +87,7 @@ map
 
 To make it interactive we can do the following:
 
-```{r choropleth_interactive, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
+```{r choropleth_interactive, include = FALSE, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
 tmap::tmap_mode("view")
 map
 ```
@@ -162,7 +162,7 @@ apply the `bd_search()` function. The result can also include centroids for thos
 
 
 ```{r search, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
-amtali <- bd_search("amtali", level = "union", as.is = T, coordinates = T)
+amtali <- bd_search("amtali", level = "union", as.is = TRUE, coordinates = TRUE)
 knitr::kable(amtali, format = "html")
 ggplot(bangladesh::map_union) +
   geom_sf() +

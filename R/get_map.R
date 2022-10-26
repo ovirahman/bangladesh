@@ -2,6 +2,10 @@
 #'
 #' @param level administrative level of bangladesh. Should be one of: "country", "division", "district", "upazila","union'
 #' @return shapefile for given administrative level
+#' @examples
+#' country <- get_map("country")
+#' division <- get_map("division")
+#' district <- get_map("district")
 #' @export
 
 get_map <-

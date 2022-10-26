@@ -4,7 +4,7 @@
 \alias{bd_search}
 \title{search for specific areas}
 \usage{
-bd_search(searchFor, level = "division", as.is = F, coordinates = F)
+bd_search(searchFor, level = "division", as.is = FALSE, coordinates = FALSE)
 }
 \arguments{
 \item{searchFor}{search keyword}
@@ -15,6 +15,12 @@ bd_search(searchFor, level = "division", as.is = F, coordinates = F)
 
 \item{coordinates}{boolean, if TRUE, returns centroids of searched areas (latitudes and longitudes)}
 }
+\value{
+A data frame
+}
 \description{
 uses sf
+}
+\examples{
+bd_search("amtali", level = "union", as.is = TRUE, coordinates = TRUE)
 }
