@@ -54,7 +54,7 @@ bd_plot("district")
 
 We can also plot beautiful interactive maps with this.
 
-```{r interactive,include = FALSE, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
+```{r interactive,include = T, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
 bd_plot(level = "district", type = "interactive")
 ```
 
@@ -87,7 +87,7 @@ map
 
 To make it interactive we can do the following:
 
-```{r choropleth_interactive, include = FALSE, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
+```{r choropleth_interactive, include = T, warning=FALSE, message=FALSE,fig.width = 5, fig.height = 5, fig.align = "center"}
 tmap::tmap_mode("view")
 map
 ```

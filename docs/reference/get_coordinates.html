@@ -66,7 +66,94 @@
 <dd><p>administrative level of bangladesh. Should be one of: "division", "district", "upazila","union'</p></dd>
 
 </dl></div>
+    <div id="value">
+    <h2>Value</h2>
+    
 
+<p>A data frame containing latitudes and longitudes</p>
+    </div>
+
+    <div id="ref-examples">
+    <h2>Examples</h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">get_coordinates</span><span class="op">(</span>level <span class="op">=</span> <span class="st">"division"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     Division      lat      lon</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    Barisal 22.41889 90.34684</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Chittagong 22.70692 91.73546</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3      Dhaka 23.83870 90.24064</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4     Khulna 22.91367 89.29437</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 Mymensingh 24.84675 90.38088</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   Rajshahi 24.58846 89.04540</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7    Rangpur 25.77920 89.05685</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8     Sylhet 24.71515 91.66400</span>
+<span class="r-in"><span><span class="fu">get_coordinates</span><span class="op">(</span>level <span class="op">=</span> <span class="st">"district"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      Division      District      lat      lon</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1      Khulna      Bagerhat 22.36868 89.73938</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  Chittagong     Bandarban 21.80663 92.36397</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3     Barisal       Barguna 22.14109 90.12046</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4     Barisal       Barisal 22.81124 90.34170</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5     Barisal         Bhola 22.33555 90.73325</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6    Rajshahi         Bogra 24.82440 89.37881</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  Chittagong Brahamanbaria 23.95292 91.08335</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  Chittagong      Chandpur 23.27355 90.77113</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  Chittagong    Chittagong 22.44282 91.83494</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10     Khulna     Chuadanga 23.60820 88.84790</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 Chittagong       Comilla 23.43668 91.03426</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12 Chittagong   Cox's Bazar 21.48342 92.06418</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13      Dhaka         Dhaka 23.78687 90.25079</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14    Rangpur      Dinajpur 25.62974 88.78739</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15      Dhaka      Faridpur 23.47896 89.83889</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16 Chittagong          Feni 22.99939 91.41243</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17    Rangpur     Gaibandha 25.29859 89.50577</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18      Dhaka       Gazipur 24.09838 90.44497</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19      Dhaka     Gopalganj 23.10545 89.89955</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20     Sylhet      Habiganj 24.36790 91.43036</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21 Mymensingh      Jamalpur 24.97289 89.84639</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22     Khulna       Jessore 23.08969 89.17475</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23    Barisal     Jhalokati 22.57279 90.18395</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24     Khulna     Jhenaidah 23.48911 89.08727</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25   Rajshahi     Joypurhat 25.09266 89.08292</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26 Chittagong  Khagrachhari 23.16400 91.95199</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27     Khulna        Khulna 22.46955 89.44768</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28      Dhaka   Kishoreganj 24.37613 90.94235</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29    Rangpur      Kurigram 25.79168 89.69478</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30     Khulna       Kushtia 23.92294 89.02214</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31 Chittagong    Lakshmipur 22.89164 90.85600</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32    Rangpur   Lalmonirhat 26.06297 89.23613</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33      Dhaka     Madaripur 23.21791 90.16513</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34     Khulna        Magura 23.44313 89.43374</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35      Dhaka     Manikganj 23.84392 89.94970</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36     Sylhet   Maulvibazar 24.48037 91.91514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37     Khulna      Meherpur 23.79411 88.70710</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38      Dhaka    Munshiganj 23.52577 90.41729</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39 Mymensingh    Mymensingh 24.69876 90.42865</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40   Rajshahi       Naogaon 24.89949 88.75179</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41     Khulna        Narail 23.13005 89.58025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42      Dhaka   Narayanganj 23.72319 90.57797</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43      Dhaka     Narsingdi 24.00223 90.77321</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44   Rajshahi        Natore 24.38028 89.08674</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45   Rajshahi     Nawabganj 24.71567 88.26406</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46 Mymensingh     Netrakona 24.87054 90.84486</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47    Rangpur    Nilphamari 26.02451 88.92956</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48 Chittagong      Noakhali 22.69328 91.12472</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49   Rajshahi         Pabna 24.05315 89.38543</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50    Rangpur    Panchagarh 26.28503 88.57561</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51    Barisal    Patuakhali 22.19088 90.39887</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52    Barisal      Pirojpur 22.53352 89.99313</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53      Dhaka       Rajbari 23.72768 89.56159</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54   Rajshahi      Rajshahi 24.46571 88.65149</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55 Chittagong     Rangamati 22.82879 92.27998</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56    Rangpur       Rangpur 25.64964 89.23692</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57     Khulna      Satkhira 22.38080 89.13697</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58      Dhaka    Shariatpur 23.24737 90.40832</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59 Mymensingh       Sherpur 25.08220 90.07448</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60   Rajshahi     Sirajganj 24.39143 89.59972</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61     Sylhet     Sunamganj 24.93850 91.34613</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62     Sylhet        Sylhet 24.91921 91.98720</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63      Dhaka       Tangail 24.35602 89.99862</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64    Rangpur    Thakurgaon 25.99054 88.34549</span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top"><h2 data-toc-skip>Contents</h2>

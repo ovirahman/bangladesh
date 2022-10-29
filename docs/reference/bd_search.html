@@ -57,7 +57,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">bd_search</span><span class="op">(</span><span class="va">searchFor</span>, level <span class="op">=</span> <span class="st">"division"</span>, as.is <span class="op">=</span> <span class="cn">F</span>, coordinates <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">bd_search</span><span class="op">(</span><span class="va">searchFor</span>, level <span class="op">=</span> <span class="st">"division"</span>, as.is <span class="op">=</span> <span class="cn">FALSE</span>, coordinates <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -78,7 +78,23 @@
 <dd><p>boolean, if TRUE, returns centroids of searched areas (latitudes and longitudes)</p></dd>
 
 </dl></div>
+    <div id="value">
+    <h2>Value</h2>
+    
 
+<p>A data frame</p>
+    </div>
+
+    <div id="ref-examples">
+    <h2>Examples</h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">bd_search</span><span class="op">(</span><span class="st">"amtali"</span>, level <span class="op">=</span> <span class="st">"union"</span>, as.is <span class="op">=</span> <span class="cn">TRUE</span>, coordinates <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     Division     District       Upazila  Union      lat      lon</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    Barisal      Barguna        Amtali Amtali 22.07556 90.24699</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Chittagong    Rangamati Baghai Chhari Amtali 23.10559 92.18832</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3      Dhaka    Gopalganj   Kotali Para Amtali 22.98264 90.03070</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 Chittagong Khagrachhari     Matiranga Amtali 23.11701 91.88545</span>
+</code></pre></div>
+    </div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top"><h2 data-toc-skip>Contents</h2>
