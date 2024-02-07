@@ -34,3 +34,5 @@ Suggests:
     scales,
     viridis
 VignetteBuilder: knitr
+URL: https://www.ovirahman.com/bangladesh/, https://github.com/ovirahman/bangladesh
+BugReports: https://github.com/ovirahman/bangladesh/issues
